@@ -1,0 +1,14 @@
+# Desktop App
+customtkinter>=5.2.0
+CTkMessagebox>=2.5
+pillow>=9.4.0
+
+# Shared
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+selenium>=4.15.0
+webdriver-manager>=4.0.0
+
+# Server (Chrome Extension Backend)
+flask>=2.0.0
+flask-cors>=3.0.0

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f5ff"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="128" height="128" rx="24" fill="#0a0612"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.1">
+    <line x1="0" y1="32" x2="128" y2="32" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="0" y1="64" x2="128" y2="64" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="0" y1="96" x2="128" y2="96" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="32" y1="0" x2="32" y2="128" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="64" y1="0" x2="64" y2="128" stroke="#7c3aed" stroke-width="0.5"/>
+    <line x1="96" y1="0" x2="96" y2="128" stroke="#7c3aed" stroke-width="0.5"/>
+  </g>
+
+  <!-- Main icon - Layered download symbol -->
+  <g filter="url(#glow)" transform="translate(64, 64)">
+    <!-- Top layer -->
+    <path d="M-30 -20 L0 -35 L30 -20" fill="none" stroke="url(#cyanGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Middle layer -->
+    <path d="M-30 0 L0 -15 L30 0" fill="none" stroke="url(#purpleGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Bottom layer -->
+    <path d="M-30 20 L0 5 L30 20" fill="none" stroke="url(#purpleGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Download arrow -->
+    <path d="M0 -5 L0 35" stroke="#00f5ff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-12 23 L0 35 L12 23" fill="none" stroke="#00f5ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Corner accents -->
+  <rect x="8" y="8" width="16" height="3" rx="1.5" fill="#a855f7" opacity="0.6"/>
+  <rect x="8" y="8" width="3" height="16" rx="1.5" fill="#a855f7" opacity="0.6"/>
+  <rect x="104" y="117" width="16" height="3" rx="1.5" fill="#00f5ff" opacity="0.6"/>
+  <rect x="117" y="104" width="3" height="16" rx="1.5" fill="#00f5ff" opacity="0.6"/>
+</svg>
