@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  python:
+    name: Python syntax check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Byte-compile all Python sources
+        run: python -m compileall -q *.py
+
+  extension:
+    name: Validate Chrome extension
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate manifest.json
+        run: python -c "import json; json.load(open('extension/manifest.json'))"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Syntax-check extension scripts
+        run: for f in extension/*.js; do node --check "$f"; done

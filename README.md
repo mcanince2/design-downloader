@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/mcanince2/design-downloader/actions/workflows/ci.yml"><img src="https://github.com/mcanince2/design-downloader/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/python-3.9%2B-blue.svg" alt="Python">
   <img src="https://img.shields.io/badge/chrome-extension-ff2e97.svg" alt="Chrome Extension">
   <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License: MIT">
