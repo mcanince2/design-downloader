@@ -29,6 +29,14 @@
 - **AI-assisted folder organization** to keep your downloads tidy.
 - **No API keys, no account, no telemetry** — it works straight out of the box.
 
+## 📸 Screenshot
+
+<p align="center">
+  <img src="assets/screenshots/popup.png" alt="Design Downloader Chrome extension" width="360">
+</p>
+
+<p align="center"><i>The Chrome extension popup — paste a Behance / Dribbble / Pinterest URL, pick a folder, and download.</i></p>
+
 ## 📦 Requirements
 
 - Python 3.9+
